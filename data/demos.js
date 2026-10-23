@@ -8,7 +8,7 @@ const V = (f) => ({ video: `static/videos/${f}.mp4`, poster: `static/posters/${f
 
 BENCH.demos = [
   {
-    model: "Fable 5.1 xhigh",
+    model: "Fable 5.1",
     org: "Anthropic",
     items: [
       { title: "Side-scrolling Shooter", task: "expert_shooter_2d_003", family: "Action", tier: "high", ...V("fable51__action-expert-shooter-2d-003") },
@@ -20,7 +20,7 @@ BENCH.demos = [
     ],
   },
   {
-    model: "GPT-6 Astra",
+    model: "GPT-6-astra",
     org: "OpenAI",
     items: [
       { title: "Real-time Strategy", task: "v3_rts_2d_023", family: "Strategy", tier: "high", ...V("gpt6-astra__strategy-v3-rts-2d-023") },
@@ -38,22 +38,22 @@ BENCH.compare = [
   {
     task: "expert_shooter_2d_003", title: "Side-scrolling Shooter", family: "Action",
     entries: [
-      { model: "Fable 5.1 xhigh", ...V("fable51__action-expert-shooter-2d-003") },
-      { model: "GPT-6 Astra", ...V("gpt6-astra__action-expert-shooter-2d-003") },
+      { model: "Fable 5.1", ...V("fable51__action-expert-shooter-2d-003") },
+      { model: "GPT-6-astra", ...V("gpt6-astra__action-expert-shooter-2d-003") },
     ],
   },
   {
     task: "v3_rts_2d_023", title: "Real-time Strategy", family: "Strategy",
     entries: [
-      { model: "Fable 5.1 xhigh", ...V("fable51__strategy-v3-rts-2d-023") },
-      { model: "GPT-6 Astra", ...V("gpt6-astra__strategy-v3-rts-2d-023") },
+      { model: "Fable 5.1", ...V("fable51__strategy-v3-rts-2d-023") },
+      { model: "GPT-6-astra", ...V("gpt6-astra__strategy-v3-rts-2d-023") },
     ],
   },
   {
     task: "repro_tinybookshop_mobile_2d_014", title: "Bookshop Sim Remake", family: "Social & Tabletop",
     entries: [
-      { model: "Fable 5.1 xhigh", portrait: true, ...V("fable51__simulation-sandbox-repro-tinybookshop-mobile-2d-014") },
-      { model: "GPT-6 Astra", ...V("gpt6-astra__social-tabletop-repro-tinybookshop-mobile-2d-014") },
+      { model: "Fable 5.1", portrait: true, ...V("fable51__simulation-sandbox-repro-tinybookshop-mobile-2d-014") },
+      { model: "GPT-6-astra", ...V("gpt6-astra__social-tabletop-repro-tinybookshop-mobile-2d-014") },
     ],
   },
 ];

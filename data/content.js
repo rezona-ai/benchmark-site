@@ -83,7 +83,7 @@ BENCH.rubrics = [
 // 主要发现。stat 为大号数字（可选），image 为配图（可选）
 BENCH.findings = [
   { title: "Delivering a working project is the first bottleneck", stat: "21.0%", statLabel: "of 2,160 attempts fail the static gate or produce no artifact",
-    desc: "Rates range from 13.3% for GPT-6 Astra to 33.3% for Seed Evolving V4. Because failed attempts stay in the averages, delivery problems lower every score downstream.", wide: true },
+    desc: "Rates range from 13.3% for GPT-6-astra to 33.3% for Seed evolving. Because failed attempts stay in the averages, delivery problems lower every score downstream.", wide: true },
   { title: "No independently judged system meets the specification reliably", stat: "44.7 / 40.7", statLabel: "Fable 5.1: best Completeness / Richness without self-evaluation",
     desc: "Among combinations whose evaluator is a different model, none passes more than 50% of requirements on either layer." },
   { title: "Task source changes how hard a task looks",
@@ -93,6 +93,6 @@ BENCH.findings = [
     desc: "C1 Core Rules and C3 Numerical Design are relatively strong, while C7 Feedback & Game Feel is lowest overall. On hidden requirements, C4 Interaction & Input also falls behind.",
     image: "static/images/figures/finding-capability.png" },
   { title: "One aggregate hides platform and evaluator effects",
-    desc: "Mobile scores higher than PC on both layers and fails the gate less often, and GPT-6 Astra benefits from same-model evaluation. Read rankings together with task composition and evaluator setup.",
+    desc: "Mobile scores higher than PC on both layers and fails the gate less often, and GPT-6-astra benefits from same-model evaluation. Read rankings together with task composition and evaluator setup.",
     image: "static/images/figures/finding-platform.png" },
 ];

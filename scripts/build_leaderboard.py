@@ -10,15 +10,15 @@ META = {  # model_key -> (display name, org); names follow the paper's Table 5
     "cc_deepseek_flash_41": ("DeepSeek-V4.1-Flash", "DeepSeek"),
     "cc_deepseek_v4_flash": ("DeepSeek-V4-Flash-0731", "DeepSeek"),
     "cc_fable_5": ("Fable 5", "Anthropic"),
-    "cc_fable_5_1": ("Fable 5.1 xhigh", "Anthropic"),
+    "cc_fable_5_1": ("Fable 5.1", "Anthropic"),
     "cc_glm_5_2": ("GLM-5.2", "Zhipu AI"),
     "cc_glm_5_3": ("GLM-5.3", "Zhipu AI"),
     "cc_opus_5": ("Opus 5", "Anthropic"),
-    "cc_seed_evolving": ("Seed Evolving V4", "ByteDance Seed"),
+    "cc_seed_evolving": ("Seed evolving", "ByteDance Seed"),
     "codex_deepseek_v4_pro": ("DeepSeek-V4-Pro", "DeepSeek"),
     "codex_gpt_5_5": ("GPT-5.5", "OpenAI"),
     "codex_gpt_5_6_sol": ("GPT-5.6-sol", "OpenAI"),
-    "codex_gpt_6_astra": ("GPT-6 Astra", "OpenAI"),
+    "codex_gpt_6_astra": ("GPT-6-astra", "OpenAI"),
 }
 SELF_EVAL = {"codex_gpt_6_astra"}  # evaluator is the same model
 UPDATED = "2026-10-15"
