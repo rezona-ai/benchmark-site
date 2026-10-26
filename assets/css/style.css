@@ -300,7 +300,6 @@ td.heat.best { font-weight: 700; box-shadow: inset 0 -2px 0 var(--accent); }
 .demo .play::before { content: ""; border-left: 8px solid currentColor; border-block: 5px solid transparent; }
 
 /* ---------- citation ---------- */
-.ack { font-size: 15px; margin-top: 18px !important; }
 
 /* ---------- modal ---------- */
 .modal { position: fixed; inset: 0; background: rgba(6, 9, 18, .78); display: none; align-items: center; justify-content: center; z-index: 100; padding: 16px; }
