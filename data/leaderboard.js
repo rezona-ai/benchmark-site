@@ -5,7 +5,7 @@ window.BENCH = window.BENCH || {};
 
 BENCH.leaderboard = {
   updated: "2026-10-24",
-  note: "All 1,980 records (11 combinations × 180 tasks, one final record each) are scored; a record that fails the static gate or has no artifact scores zero on every public and hidden requirement. Fixed-sample descriptive results; no confidence intervals. † The evaluator is the same model.",
+  note: "All 1,980 records (11 combinations × 180 tasks, one final record each) are scored; a record that fails the static gate or has no artifact scores zero on every public and hidden requirement. Fixed-sample descriptive results; no confidence intervals. The judge is stricter than human play-testing, so absolute pass rates are best read as a lower bound; differences between systems remain informative. † The evaluator is the same model.",
   entries: [
     {"model": "GPT-6-astra", "org": "OpenAI", "key": "codex_gpt_6_astra", "harness": "Codex CLI", "selfEval": true, "completeness": 57.1, "richness": 47.6, "gateFail": 13.3, "caps": {"C1": 57.2, "C2": 45.4, "C3": 57.2, "C4": 54.7, "C5": 52.5, "C6": 51.1, "C7": 57.6, "C8": 53.4}},
     {"model": "Fable 5.1", "org": "Anthropic", "key": "cc_fable_5_1", "harness": "Claude Code", "selfEval": false, "completeness": 44.7, "richness": 38.2, "gateFail": 17.8, "caps": {"C1": 43.4, "C2": 38.2, "C3": 45.1, "C4": 38.3, "C5": 45.0, "C6": 42.4, "C7": 41.2, "C8": 42.5}},

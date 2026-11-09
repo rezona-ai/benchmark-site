@@ -64,7 +64,7 @@ BENCH.evalSteps = [
   { title: "Generate", desc: "Each of 11 model–harness combinations (Claude Code or Codex CLI) builds every task from an empty workspace within 120 minutes. One final record is kept per model and task." },
   { title: "Static gate", desc: "The evaluator checks entry files, dependencies and execution paths in the source to decide whether the project can run." },
   { title: "Source judge", desc: "Given the specification and source, the evaluator marks every public and hidden requirement as pass or fail with evidence." },
-  { title: "Human cross-check", desc: "Requirement judgments on a limited sample are compared with human playtesting to locate disagreement." },
+  { title: "Human cross-check", desc: "On a limited sample, the judge is about 29 points stricter than human play-testing but ranks systems the same way (Spearman's ρ = 0.95)." },
   { title: "Score all records", desc: "All 1,980 records count. A gate failure or missing artifact scores zero on all ten requirements." },
 ];
 

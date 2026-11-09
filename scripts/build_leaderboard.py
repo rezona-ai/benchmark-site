@@ -39,7 +39,7 @@ window.BENCH = window.BENCH || {{}};
 
 BENCH.leaderboard = {{
   updated: "{UPDATED}",
-  note: "All 1,980 records (11 combinations × 180 tasks, one final record each) are scored; a record that fails the static gate or has no artifact scores zero on every public and hidden requirement. Fixed-sample descriptive results; no confidence intervals. † The evaluator is the same model.",
+  note: "All 1,980 records (11 combinations × 180 tasks, one final record each) are scored; a record that fails the static gate or has no artifact scores zero on every public and hidden requirement. Fixed-sample descriptive results; no confidence intervals. The judge is stricter than human play-testing, so absolute pass rates are best read as a lower bound; differences between systems remain informative. † The evaluator is the same model.",
   entries: [""")
 for e in rows:
     print("    " + json.dumps(e, ensure_ascii=False) + ",")
