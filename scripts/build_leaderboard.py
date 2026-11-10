@@ -21,6 +21,10 @@ ORG = {  # model_key -> org; display names come from the CSV and follow the pape
 EXTRA = [  # combinations not in results/leaderboard.csv; caps unknown, shown as "–"
     {"model": "Step-5-preview", "org": "StepFun", "key": "cc_step_5_preview", "harness": "Claude Code", "selfEval": False,
      "completeness": 17.6, "richness": 25.8, "gateFail": 30.6, "caps": {}},
+    # Seed: recomputed from the pre-final release's raw judgments with the gate-zero rule
+    {"model": "Seed evolving", "org": "ByteDance Seed", "key": "cc_seed_evolving", "harness": "Claude Code", "selfEval": False,
+     "completeness": 21.0, "richness": 22.9, "gateFail": 33.3,
+     "caps": {"C1": 28.0, "C2": 18.4, "C3": 27.7, "C4": 20.4, "C5": 21.1, "C6": 14.1, "C7": 8.2, "C8": 23.6}},
 ]
 SELF_EVAL = {"codex_gpt_6_astra"}  # evaluator is the same model
 CAPS = [f"C{i}" for i in range(1, 9)]
