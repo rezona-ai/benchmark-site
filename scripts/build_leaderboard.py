@@ -18,6 +18,10 @@ ORG = {  # model_key -> org; display names come from the CSV and follow the pape
     "codex_gpt_5_6_sol": "OpenAI",
     "codex_gpt_6_astra": "OpenAI",
 }
+EXTRA = [  # combinations not in results/leaderboard.csv; caps unknown, shown as "–"
+    {"model": "Step-5-preview", "org": "StepFun", "key": "cc_step_5_preview", "harness": "Claude Code", "selfEval": False,
+     "completeness": 17.6, "richness": 25.8, "gateFail": 30.6, "caps": {}},
+]
 SELF_EVAL = {"codex_gpt_6_astra"}  # evaluator is the same model
 CAPS = [f"C{i}" for i in range(1, 9)]
 UPDATED = "2026-10-24"
@@ -30,6 +34,7 @@ for r in csv.DictReader(open(sys.argv[1], encoding="utf-8-sig")):
                  "selfEval": k in SELF_EVAL,
                  "completeness": p(r["completeness"]), "richness": p(r["richness"]),
                  "gateFail": p(r["gate_fail_rate"]), "caps": {c: p(r[c]) for c in CAPS}})
+rows += EXTRA
 rows.sort(key=lambda e: -e["completeness"])
 
 print(f"""// 排行榜数据：由 scripts/build_leaderboard.py 从 octave-bench 的 results/leaderboard.csv 生成（数据版本 {UPDATED}）。

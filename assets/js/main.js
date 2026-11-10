@@ -24,7 +24,7 @@
   const wireAllImgs = (root = document) => root.querySelectorAll("img[data-ph]").forEach(wireImg);
 
   // 厂商单字母标识（无需外部 logo 文件）
-  const ORG_KEY = { Anthropic: "anthropic", OpenAI: "openai", "ByteDance Seed": "seed", "Zhipu AI": "zhipu", DeepSeek: "deepseek" };
+  const ORG_KEY = { Anthropic: "anthropic", OpenAI: "openai", "ByteDance Seed": "seed", "Zhipu AI": "zhipu", DeepSeek: "deepseek", StepFun: "stepfun" };
   const orgOf = (model) => {
     for (const g of B.demos || []) if (g.model === model) return g.org;
     for (const e of (B.leaderboard || {}).entries || []) if (e.model === model) return e.org;
@@ -166,6 +166,7 @@
     const rows = ranked.filter((e) => lbFilter === "all" || e.harness === lbFilter);
     rows.sort((a, b) => {
       const x = lbVal(a, lbSort.key), y = lbVal(b, lbSort.key);
+      if ((x === undefined) !== (y === undefined)) return x === undefined ? 1 : -1;  // missing values sort last
       return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * lbSort.dir;
     });
     const best = {};
@@ -189,6 +190,7 @@
     const body = rows.map((e) => `<tr>${cols.map((c) => {
       if (cell[c.key]) return cell[c.key](e);
       const v = e.caps[c.key];
+      if (typeof v !== "number") return `<td class="num">${fmt(v)}</td>`;
       return `<td class="heat ${v === best[c.key] ? "best" : ""}" style="--h:${Math.round(v * 0.8)}%">${fmt(v)}</td>`;
     }).join("")}</tr>`).join("");
 

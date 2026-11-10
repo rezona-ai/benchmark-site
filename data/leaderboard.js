@@ -18,5 +18,6 @@ BENCH.leaderboard = {
     {"model": "GLM-5.2", "org": "Zhipu AI", "key": "cc_glm_5_2", "harness": "Claude Code", "selfEval": false, "completeness": 24.3, "richness": 25.8, "gateFail": 26.7, "caps": {"C1": 31.2, "C2": 20.4, "C3": 31.4, "C4": 21.9, "C5": 22.3, "C6": 25.0, "C7": 11.8, "C8": 23.6}},
     {"model": "DeepSeek-V4-Flash-0731", "org": "DeepSeek", "key": "cc_deepseek_v4_flash", "harness": "Claude Code", "selfEval": false, "completeness": 23.5, "richness": 26.9, "gateFail": 26.7, "caps": {"C1": 31.8, "C2": 19.7, "C3": 24.6, "C4": 22.9, "C5": 25.2, "C6": 26.1, "C7": 15.3, "C8": 25.9}},
     {"model": "DeepSeek-V4-Pro", "org": "DeepSeek", "key": "codex_deepseek_v4_pro", "harness": "Codex CLI", "selfEval": false, "completeness": 22.2, "richness": 25.3, "gateFail": 22.8, "caps": {"C1": 26.9, "C2": 17.8, "C3": 28.0, "C4": 23.9, "C5": 25.2, "C6": 16.9, "C7": 20.0, "C8": 25.3}},
+    {"model": "Step-5-preview", "org": "StepFun", "key": "cc_step_5_preview", "harness": "Claude Code", "selfEval": false, "completeness": 17.6, "richness": 25.8, "gateFail": 30.6, "caps": {}},
   ],
 };
